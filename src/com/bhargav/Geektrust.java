@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Main {
+public class Geektrust {
 
     private final static String LOAN = "LOAN";
     private final static String BALANCE = "BALANCE";
@@ -25,9 +25,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the path of the file:");
-        String filePath = reader.readLine();
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//        System.out.println("Enter the path of the file:");
+        String filePath = args[0];
         List<String> list;
         try (BufferedReader br = Files.newBufferedReader(Paths.get(filePath))) {
             list = br.lines().collect(Collectors.toList());
